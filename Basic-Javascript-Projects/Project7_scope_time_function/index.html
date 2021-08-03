@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="JS/main.js"></script>
+        <style>
+            #blue {
+                color: blue;
+                text-decoration: underline;
+            }
+
+            #blue:hover {
+                cursor: pointer;
+            }
+
+            #Time_of_Day {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <p><span onclick="returnNumber1()" id="blue">Click here</span> to see my favorite number: <span id="Favorite_Number1"></span></p>
+        <p><span onclick="returnNumber2()" id="blue">Click here</span> to see my most favorite number: <span id="Favorite_Number2"></span></p>
+
+        <p><span onclick="hourCheck()" id="blue">Click here</span> to see if you're working too late: <span id="Hour_in_the_Day"></span></p>
+    
+        <p>What is your current temperature in fahrenheit?</p>
+        <input id="Temp" value="" />
+        <button onclick="tempCheck()">Submit</button>
+        <p id="Clothing"></p>
+
+        <p id="Time_of_Day"></p>
+        <button onclick="Time_function()">Click here to get the time.</button>
+    </body>
+</html>
