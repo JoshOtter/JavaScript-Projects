@@ -9,7 +9,7 @@ function placeXOrO(squareNumber) {
     //The .some() method is used to check each element of selectedSquare array
     //to see if it contains the square number clicked on.
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
-        //This variable retrieves teh html element id that was clicked.
+        //This variable retrieves the html element id that was clicked.
         let select = document.getElementById(squareNumber);
         if (activePlayer === 'X') {
             //If activePlayer is equal to 'X', the x.png is placed in HTML.
@@ -19,7 +19,7 @@ function placeXOrO(squareNumber) {
             //If activePlayer is equal to 'O', the o.png is placed in HTML.
             select.style.backgroundImage = 'url("images/o.png")';
         }
-        //squareNumber and activePlayer are concatenated together an dadded to array.
+        //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
         //This calls a function to check for any win conditions.
         checkWinConditions();
@@ -39,7 +39,7 @@ function placeXOrO(squareNumber) {
         if(activePlayer === 'O') {
             //This function disables clicking for computer choice.
             disableClick();
-            //This function waits 1 seond beore computer places image and enables click.
+            //This function waits 1 seond before computer places image and enables click.
             setTimeout(function () { computersTurn(); }, 1000)
         }
         //Returning true is needed for our computersTurn() function to work.
@@ -131,7 +131,7 @@ function disableClick() {
     setTimeout(function() {body.style.pointerEvents = "auto";}, 1000);
 }
 
-//This function takes a string parameter of teh path you set earlier for
+//This function takes a string parameter of the path you set earlier for
 //placement sound ('./media/place.mp3')
 function audio(audioURL) {
     //We create a new audio object and we pass the path as a parameter.
@@ -164,7 +164,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     function animateLineDrawing() {
         //This variable creates a loop.
         const animationLoop = requestAnimationFrame(animateLineDrawing);
-        //This method clears content from last loop iteratino.
+        //This method clears content from last loop iteration.
         c.clearRect(0, 0, 608, 608)
         //This method starts a new path
         c.beginPath();
